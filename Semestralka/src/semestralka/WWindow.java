@@ -5,21 +5,19 @@
 package semestralka;
 
 import java.awt.*;
-import java.awt.event.*;
-import java.util.List;
 import javax.swing.*;
 
 /**
  *
  * @author Milan
  */
-public class WWindow extends JFrame implements ActionListener, ItemListener {
+public class WWindow extends JFrame    {
     Button start;
     JLabel players;
     JLabel credit;
    Choice list;
     JTextField pole;
-    
+    Operation o;
     
     public WWindow() throws HeadlessException {
         
@@ -42,7 +40,7 @@ public class WWindow extends JFrame implements ActionListener, ItemListener {
         
         
         
-        credit = new JLabel("STARTING CREDITS:" );
+        credit = new JLabel("STARTING CREDIT:" );
         credit.setBounds(80, 100, 180, 20);
         this.add(credit);
         
@@ -51,23 +49,15 @@ public class WWindow extends JFrame implements ActionListener, ItemListener {
         pole.setBounds(90, 130, 100, 20);
         this.add(pole);
         
+        o = new Operation();
         start = new Button("START", 90, 200, 100, 30);
         start.setBackground(Color.green);
-//        start.addActionListener(o);
+        start.addActionListener(o);
         this.add(start);
         
 
   
 }
 
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
