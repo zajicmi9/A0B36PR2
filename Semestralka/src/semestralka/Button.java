@@ -23,7 +23,4 @@ public class Button  extends JButton {
 
         
     }
-
-
-
 }
