@@ -21,27 +21,21 @@ public class OperationStart implements ActionListener {
         RulletWindow r = new RulletWindow ();  
         int players,credit;
         players = (int) Double.parseDouble(w.list.getSelectedItem());
-        credit = (int) Double.parseDouble(w.pole.getText());
+        credit = (int) Double.parseDouble(w.field.getText());
         
         switch (b.getText()) {
             case"NEW GAME":
                         if(credit>0){
                              w.setVisible(false);
-                             r.setVisible(true);
+                             r.setVisible(true); 
                         } else { 
                         }
                         System.out.println(players);
                         System.out.println(credit);
                 break;
             case"LOAD GAME":
-                
                 break;
         }
-        
-        
-
-            
-        
         
             }
 }
