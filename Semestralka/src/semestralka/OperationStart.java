@@ -28,7 +28,10 @@ public class OperationStart implements ActionListener {
                         if(credit>0){
                              w.setVisible(false);
                              r.setVisible(true); 
+                             
                         } else { 
+                            w.fail.setText("BAD CREDITS");
+                            
                         }
                         System.out.println(players);
                         System.out.println(credit);
