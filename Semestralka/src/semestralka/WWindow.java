@@ -21,6 +21,7 @@ public class WWindow extends JFrame     {
     Button load;
     JLabel players;
     JLabel credit;
+    JLabel fail;
     Choice list;
     JTextField field;
     JTextField p1;
@@ -28,7 +29,7 @@ public class WWindow extends JFrame     {
     JTextField p3;
     JTextField p4;
     OperationStart o;
-    Item Ite;
+    
     
     
     public WWindow() throws HeadlessException {
@@ -42,7 +43,6 @@ public class WWindow extends JFrame     {
         players.setBounds(80, 20, 180, 20);
         this.add(players);
         
-        Ite = new Item();
         list = new Choice();
         this.add(list);
         list.setBounds(90, 50, 100, 20);
@@ -107,13 +107,17 @@ public class WWindow extends JFrame     {
         p4.setEnabled(false);
    
         credit = new JLabel("STARTING CREDIT:" );
-        credit.setBounds(80, 210, 180, 20);
+        credit.setBounds(85, 210, 180, 20);
         this.add(credit);
         
         field = new JTextField("", 2);
         field.setHorizontalAlignment(SwingConstants.CENTER);
         field.setBounds(90, 250, 100, 20);
         this.add(field);
+        
+        fail = new JLabel("");
+        fail.setBounds(100, 280, 100, 20);
+        this.add(fail);
         
         o = new OperationStart();
         start = new Button("NEW GAME", 25, 320, 110, 30);
