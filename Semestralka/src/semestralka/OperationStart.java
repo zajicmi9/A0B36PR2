@@ -19,6 +19,7 @@ public class OperationStart implements ActionListener {
         Button b = (Button) o.getSource();
         WWindow w  = (WWindow) b.getParent().getParent().getParent().getParent();   
         RulletWindow r = new RulletWindow ();  
+        
         int players,credit;
         players = (int) Double.parseDouble(w.list.getSelectedItem());
         credit = (int) Double.parseDouble(w.field.getText());
