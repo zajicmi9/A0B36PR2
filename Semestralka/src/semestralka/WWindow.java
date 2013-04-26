@@ -29,6 +29,7 @@ public class WWindow extends JFrame     {
     JTextField p3;
     JTextField p4;
     OperationStart o;
+    Player first,second, third, fourth;
     
     
     
@@ -38,6 +39,7 @@ public class WWindow extends JFrame     {
         this.setSize(300, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);  
+        this.setLocation(900, 100);
         
         players = new JLabel("NUMBER OF PLAYERS" );
         players.setBounds(80, 20, 180, 20);
@@ -50,7 +52,6 @@ public class WWindow extends JFrame     {
         list.addItem("2");
         list.addItem("3");
         list.addItem("4");
-
         
         list.addItemListener(new ItemListener(){
         @Override
@@ -63,28 +64,40 @@ public class WWindow extends JFrame     {
                     p2.setEnabled(false);
                     p3.setEnabled(false);
                     p4.setEnabled(false);
+                    first = new Player(p1.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    
                     break;
                 case "2":
                     p1.setEnabled(true);
                     p2.setEnabled(true);
                     p3.setEnabled(false);
                     p4.setEnabled(false);
+                    first = new Player(p1.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    second = new Player(p2.getSelectedText(), (int)Double.parseDouble(field.getText()));
                     break;
                 case "3":
                     p2.setEnabled(true);
                     p3.setEnabled(true);
                     p1.setEnabled(true);
                     p4.setEnabled(false);
+                    first = new Player(p1.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    second = new Player(p2.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    third = new Player(p3.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    
                     break;
                 case "4":
                     p1.setEnabled(true);
                     p2.setEnabled(true);
                     p3.setEnabled(true);
                     p4.setEnabled(true);
+                    first = new Player(p1.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    second = new Player(p2.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    third = new Player(p3.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    fourth = new Player(p4.getSelectedText(), (int)Double.parseDouble(field.getText()));
+                    
                     break;
             }
   }});
-    
                 
         p1 = new JTextField("player 1", 2);
         p1.setBounds(90, 80, 100, 20);
@@ -110,7 +123,8 @@ public class WWindow extends JFrame     {
         credit.setBounds(85, 210, 180, 20);
         this.add(credit);
         
-        field = new JTextField("", 2);
+        field = new JTextField("0");
+        
         field.setHorizontalAlignment(SwingConstants.CENTER);
         field.setBounds(90, 250, 100, 20);
         this.add(field);
@@ -122,7 +136,7 @@ public class WWindow extends JFrame     {
         o = new OperationStart();
         start = new Button("NEW GAME", 25, 320, 110, 30);
         start.setBackground(Color.green);
-        start.addActionListener(o);        
+        start.addActionListener(o);
         this.add(start);
         
         load = new Button("LOAD GAME", 145, 320, 110, 30);
