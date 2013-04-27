@@ -4,8 +4,6 @@
  */
 package semestralka;
 
-import java.awt.Color;
-
 /**
  *
  * @author Milan
@@ -20,6 +18,7 @@ public class Semestralka {
         w.setVisible(true);
         RulletWindow r = new RulletWindow (); 
         r.setVisible(false);
+        //System.out.println(Random.Random());
         
         
         

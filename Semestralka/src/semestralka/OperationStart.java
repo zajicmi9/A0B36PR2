@@ -40,8 +40,7 @@ public class OperationStart implements ActionListener {
             case"LOAD GAME":
                 break;
         }
-        
-            switch(players){
+        switch(players){
                 case 1:
                     r.p1.setText(Integer.toString(credit));
                     r.pl1.setText(w.p1.getText());
@@ -60,7 +59,6 @@ public class OperationStart implements ActionListener {
                     r.pl3.setVisible(false);
                     r.p4.setVisible(false);
                     r.pl4.setVisible(false);
-                    
                 case 3:
                     r.p1.setText(Integer.toString(credit));
                     r.p2.setText(Integer.toString(credit));
@@ -78,22 +76,7 @@ public class OperationStart implements ActionListener {
                     r.pl1.setText(w.p1.getText());
                     r.pl2.setText(w.p2.getText());
                     r.pl3.setText(w.p3.getText());
-                    r.pl4.setText(w.p4.getText());
-                    
-                    
+                    r.pl4.setText(w.p4.getText());                 
             }
-               
-        
-        
-        
-            
-            String a = w.p1.getText();
-            String e = w.p2.getText();
-            String c = w.p3.getText();
-            String d = w.p4.getText();
-            System.out.println(a+e+c+d);
-            
-
-        
             }
 }

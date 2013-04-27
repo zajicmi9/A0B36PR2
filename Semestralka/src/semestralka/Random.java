@@ -10,7 +10,7 @@ package semestralka;
  */
 public class Random {
     
-    public int Random() {
+    public static int Random() {
         int rnd;
         java.util.Random r = new java.util.Random();
         rnd = r.nextInt(37);
